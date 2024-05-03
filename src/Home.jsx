@@ -20,8 +20,8 @@ const Home = () => {
             <div className='random-works'>
                 <span>דוגמאות לעבודות שבוצעו על ידינו:</span>
                 <div className='item'>
-                    <ComparisonSlider before={'https://cdn.langeek.co/photo/26055/original/before'} after={'https://cdn.langeek.co/photo/26056/original/after'} />
-                    <ComparisonSlider before={'https://cdn-icons-png.flaticon.com/512/6702/6702465.png'} after={'https://upload.wikimedia.org/wikipedia/en/2/23/After_film_series_logo.png'} />
+                    <ComparisonSlider className='plate' before={'./images/תמונה של WhatsApp‏ 2024-05-03 בשעה 18.37.13_c1cccc43.jpg'} after={'./images/תמונה של WhatsApp‏ 2024-05-03 בשעה 18.37.13_daa70c84.jpg'} />
+                    <ComparisonSlider before={'./images/תמונה של WhatsApp‏ 2024-05-03 בשעה 18.32.32_deb7b16a.jpg'} after={'./images/תמונה של WhatsApp‏ 2024-05-03 בשעה 17.31.42_fc59eb37.jpg'} />
                 </div>
             </div>
         </div>

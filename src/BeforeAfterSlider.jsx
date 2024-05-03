@@ -13,7 +13,12 @@ const ComparisonSlider = ({ before, after }) => {
   return (
     <div className="mainWrapper">
       <div className="contentWrapper">
-        <ReactCompareImage leftImage={before} rightImage={after} />
+      <ReactCompareImage
+        leftImage={before}
+        rightImage={after}
+        leftImageCss={{ borderRadius: '50px', border:'2px solid rgb(255, 215, 0)' }} // Apply border radius to left image
+        rightImageCss={{ borderRadius: '50px', border:'2px solid rgb(255, 215, 0)' }} // Apply border radius to right image
+      />
       </div>
     </div>
   );
