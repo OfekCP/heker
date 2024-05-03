@@ -1,13 +1,12 @@
 .contact-container {
     background-color: #f7f7f7; /* Light grey background for a subtle, professional look */
-    padding: 40px; /* Spacious padding for a better layout */
     border-radius: 8px; /* Rounded corners for a modern feel */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    max-width: 800px; /* Maximum width for optimal reading experience */
+    max-width: 1200px; /* Maximum width for optimal reading experience */
+    position: relative;
+    top: 20px;
     margin: auto; /* Center the container */
-    opacity: 0; /* Start with zero opacity */
-    transform: translateY(20px); /* Move the container down by 20px */
-    animation: fadeFromBottom 1s ease forwards; /* Apply the animation */
+    animation: fadeInFromBottom 1s ease forwards;
   }
   
   .contact-text {
@@ -17,19 +16,26 @@
   }
   
   .contact-p {
-    background-color: #fff; /* White background for the paragraph */
-    padding: 20px; /* Padding for the text */
-    border-left: 4px solid rgb(255, 215, 0); /* Blue accent bar for a pop of color */
-    margin-bottom: 20px; /* Margin at the bottom for spacing */
-    font-size: 16px; /* Comfortable font size for reading */
-    text-align: justify; /* Justified text for a polished look */
+    background-color: #f0f0f0;
+    border-left: 4px solid rgb(255, 215, 0);
+    padding: 20px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    text-align: right;
     direction: rtl;
+    animation: fadeInFromBottom 1s ease forwards;
   }
   
-  @keyframes fadeFromBottom {
+  /* Make sure to define your keyframes for the animation */
+  @keyframes fadeInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
     to {
-      opacity: 1; /* Fade in to full opacity */
-      transform: translateY(0); /* Move back to original position */
+      opacity: 1;
+      transform: translateY(0);
     }
   }
+  
   
