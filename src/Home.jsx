@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css'; // Import CSS file for additional styling
 import ComparisonSlider from './BeforeAfterSlider';
+import video from "./Solid Logo Reveal_free (1).mp4_1714254924321.mp4"
 const Home = () => {
     return (
         <div className='home-container'>
@@ -11,7 +12,7 @@ const Home = () => {
             </div>
             <div className="video-container">
                 <video autoPlay muted playsInline className='logo-video'>
-                    <source src="/src/Solid Logo Reveal_free (1).mp4_1714254924321.mp4" type="video/mp4" />
+                    <source src={video} />
                     Your browser does not support the video tag.
                 </video>
 

@@ -1,41 +1,67 @@
 .custom-navbar {
-    background-color: #000900; /* Black background color */
+    background-color: #000900;
+    /* Black background color */
     border-bottom: 2px solid rgb(255, 215, 0);
-  }
-  
-  .logo {
-    margin-left: 12px; /* Add some space between logo and navigation links */
-  }
-  
-  .nav-link {
-    color: #fff !important; /* White text color for navigation links */
-    margin-right: 1rem; /* Add some space between navigation links */
-    position: relative; /* Position relative for pseudo element */
+}
+
+.logo {
+    margin-left: 12px;
+    /* Add some space between logo and navigation links */
+}
+
+.nav-link {
+    color: #fff !important;
+    /* White text color for navigation links */
+    margin-right: 1rem;
+    /* Add some space between navigation links */
+    position: relative;
+    /* Position relative for pseudo element */
     direction: rtl;
-  }
-  
-  .nav-link:not(:last-child)::after {
-    content: "|"; /* Add vertical line content */
-    position: absolute; /* Position absolute for pseudo element */
-    top: 50%; /* Align vertically in the middle */
-    right: -0.5rem; /* Adjust horizontal position */
-    transform: translateY(-50%); /* Adjust vertical position */
-    color: #fff; /* White color for the vertical line */
-  }
-  
-  .nav-link:hover {
-    color: rgb(255, 215, 0) !important; /* Change text color on hover */
-  }
-  /* navBar.css */
+}
+
+.nav-link:not(:last-child)::after {
+    content: "|";
+    /* Add vertical line content */
+    position: absolute;
+    /* Position absolute for pseudo element */
+    top: 50%;
+    /* Align vertically in the middle */
+    right: -0.5rem;
+    /* Adjust horizontal position */
+    transform: translateY(-50%);
+    /* Adjust vertical position */
+    color: #fff;
+    /* White color for the vertical line */
+}
+
+.nav-link:hover {
+    color: rgb(255, 215, 0) !important;
+    /* Change text color on hover */
+}
+
+/* navBar.css */
 .custom-navbar .nav-link {
     position: relative;
     color: white;
-  }
-  
-  .custom-navbar .nav-link:not(:last-child)::after {
+}
+
+.custom-navbar .nav-link:not(:last-child)::after {
     content: "|";
     position: absolute;
-    right: -8px; /* Adjust as needed */
-    color: rgb(255, 215, 0); /* Gold color */
-  }
-  
+    right: -8px;
+    /* Adjust as needed */
+    color: rgb(255, 215, 0);
+    /* Gold color */
+}
+
+.custom-toggler {
+    border-color: rgb(255, 215, 0);
+    margin-right: 5px;
+}
+
+.hamburger-icon {
+    width: 30px;
+    /* Adjust the width as needed */
+}
+
+/* Optional: Add additional styles to customize the appearance of the hamburger lines */
