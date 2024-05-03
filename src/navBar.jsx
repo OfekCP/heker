@@ -6,9 +6,9 @@ import './navBar.css'; // Import custom CSS for additional styling
 const MyNavbar = () => {
   return (
     <Navbar expand="lg" className="custom-navbar">
-      <Navbar.Brand href="#home" className="logo">
+      <Navbar.Brand href="/" className="logo">
         <img
-          src="./src/assets/photos/HEKER WHITE TRANSPARENT.png"
+          src="/src/assets/photos/HEKER WHITE TRANSPARENT.png"
           width="170"
           height="60"
           className="d-inline-block align-top p-0 ml-3"

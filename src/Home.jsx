@@ -11,7 +11,7 @@ const Home = () => {
             </div>
             <div className="video-container">
                 <video autoPlay muted playsInline className='logo-video'>
-                    <source src="./src/assets/photos/Solid Logo Reveal_free (1).mp4_1714254924321.mp4" type="video/mp4" />
+                    <source src="/src/assets/photos/Solid Logo Reveal_free (1).mp4_1714254924321.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
