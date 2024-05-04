@@ -1,34 +1,34 @@
 // TouchScrollDisable.js
-export function disableTouchScroll(elementId) {
-    // Function to handle touch events
-    function handleTouch(event) {
-        // Get the target element
-        const targetElement = document.getElementById(elementId);
-        if (!targetElement) return;
 
-        // Check if the touch event target is within the specified element
-        if (!targetElement.contains(event.target)) return;
+export function disableTouchScroll() {
+    // Flag to track if horizontal scrolling is active
+    let horizontalScrolling = false;
+    let verticalScrolling = true;
 
-        // Prevent vertical scrolling while sliding the comparison slider horizontally
-        if (event.touches.length === 1) {
-            const touch = event.touches[0];
-            const startY = touch.clientY;
+    // Function to handle touch start event for horizontal scrolling
+    function handleHorizontalTouchStart(event) {
+        // Set flag to true to indicate horizontal scrolling is active
+        horizontalScrolling = true;
+        verticalScrolling = false;
+    }
 
-            window.addEventListener('touchmove', function handleMove(moveEvent) {
-                const moveTouch = moveEvent.touches[0];
-                const deltaY = Math.abs(moveTouch.clientY - startY);
-                // If vertical scrolling detected, prevent default behavior
-                if (deltaY > 10) {
-                    moveEvent.preventDefault();
-                }
-            }, { passive: false });
+    // Function to handle touch end event for horizontal scrolling
+    function handleHorizontalTouchEnd(event) {
+        // Set flag to false to indicate horizontal scrolling has ended
+        horizontalScrolling = false;
+        verticalScrolling = true;
+    }
 
-            window.addEventListener('touchend', function() {
-                window.removeEventListener('touchmove', handleMove);
-            });
+    // Function to handle touch move event for horizontal scrolling
+    function handleHorizontalTouchMove(event) {
+        // If horizontal scrolling is active, prevent default vertical scrolling behavior
+        if (horizontalScrolling&&verticalScrolling) {
+            event.preventDefault();
         }
     }
 
-    // Add event listener for touch events
-    document.addEventListener('touchstart', handleTouch, { passive: false });
+    // Add event listeners for horizontal touch events
+    document.addEventListener('touchstart', handleHorizontalTouchStart, { passive: false });
+    document.addEventListener('touchend', handleHorizontalTouchEnd);
+    document.addEventListener('touchmove', handleHorizontalTouchMove, { passive: false });
 }
