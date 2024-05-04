@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './BeforeAfterSlider.css';
 import ReactCompareImage from "react-compare-image"
-import { disableTouchScroll } from './TouchScrollDisable';
 const ComparisonSlider = ({ before, after }) => {
   const [sliderValue, setSliderValue] = useState(50);
-useEffect(()=>{
-    disableTouchScroll();
-},[])
+
   const moveDivisor = (event) => {
     setSliderValue(event.target.value);
   };

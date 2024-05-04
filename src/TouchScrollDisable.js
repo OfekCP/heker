@@ -1,7 +1,14 @@
 // TouchScrollDisable.js
-export function disableTouchScroll() {
+export function disableTouchScroll(elementId) {
     // Function to handle touch events
     function handleTouch(event) {
+        // Get the target element
+        const targetElement = document.getElementById(elementId);
+        if (!targetElement) return;
+
+        // Check if the touch event target is within the specified element
+        if (!targetElement.contains(event.target)) return;
+
         // Prevent vertical scrolling while sliding the comparison slider horizontally
         if (event.touches.length === 1) {
             const touch = event.touches[0];
