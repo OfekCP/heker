@@ -4,7 +4,7 @@ import ComparisonSlider from './BeforeAfterSlider';
 import video from "./Solid Logo Reveal_free (1).mp4_1714254924321.mp4"
 import icon from './whatsapp-messaging-apps-android-whatsapp-removebg-preview.png'
 const Home = () => {
-    const phoneNumber = '0528855331';
+    const phoneNumber = '+972528855331';
 
     // WhatsApp chat link
     const whatsappLink = `https://wa.me/${phoneNumber}`;
