@@ -2,11 +2,7 @@ import React, { useEffect } from 'react';
 import './Home.css'; // Import CSS file for additional styling
 import ComparisonSlider from './BeforeAfterSlider';
 import video from "./Solid Logo Reveal_free (1).mp4_1714254924321.mp4"
-import { disableTouchScroll } from './TouchScrollDisable';
 const Home = () => {
-    useEffect(()=>{
-        disableTouchScroll();
-    },[])
     return (
         <div className='home-container'>
             <div className='preluge'>
